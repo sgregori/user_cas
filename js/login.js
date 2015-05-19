@@ -6,6 +6,13 @@
 })();
 
 $(document).ready(function(){
+	
+    var referrer = document.referrer;
+	
+	if( referrer.includes("humhub") ){
+		window.location="?app=user_cas";
+		
+	} else {
 
     var loginCas = $('<div id="login-cas"></div>');
 
@@ -69,5 +76,6 @@ $(document).ready(function(){
         window.location="?app=user_cas";
     });
 
+	}
 
 });
